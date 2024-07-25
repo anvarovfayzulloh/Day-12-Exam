@@ -1,0 +1,81 @@
+@import url(../css/fonts.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 86px;
+}
+.nav_wrapper{
+    display: flex;
+    padding: 18px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_list{
+    list-style: none;
+    display: flex;
+    gap: 44px;
+}
+.nav_link{
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.blog_container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 242px;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:92px 0px 32px 0px;
+}
+.blog__title{
+    font-family: "Jomolhari";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 64.06px;
+    color: white;
+}
+.blog__tag{
+    font-family: "Jomolhari";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32.03px;
+    color: white;
+}
+#blog__banner{
+    width: 956px;
+    height: 376px;
+    object-fit: cover;
+}
+.blog__desc{
+    width: 100%;
+    padding: 96px 68px;
+}
+.description{
+    color: white;
+    font-family: "Jomolhari";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32.03px;
+    text-align: left;
+
+}
