@@ -139,7 +139,6 @@ body {
     background-color: #1E1E1E;
     position: fixed;
     z-index: 4;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
