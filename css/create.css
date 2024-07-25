@@ -132,7 +132,10 @@ body{
 .input__desc{
     border-radius: 16px;
     border: none;
-    height: 172px;
+    max-width: 1000px;
+    min-width: 1000px;
+    max-height: 400px;
+    min-height: 200px;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 400;

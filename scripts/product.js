@@ -6,7 +6,7 @@ const $desc = document.querySelector(".description")
 
 const renderBlog = (blog)=> {
     $title.innerHTML = blog.title
-    $tag.innerHTML = blog.tags
+    $tag.innerHTML = `#${blog.tags}`
     $img.src= blog.image
     $desc.innerHTML = blog.description
 }   
