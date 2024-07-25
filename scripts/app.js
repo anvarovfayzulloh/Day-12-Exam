@@ -2,7 +2,6 @@ const $cardsWrapper = document.querySelector(".blog_cards");
 const $blog = document.querySelector(".blog");
 
 const renderBlogs = (blogs) => {
-    console.log(blogs);
     
     blogs.forEach(blog => {
         const $blogElement = $blog.cloneNode(true);

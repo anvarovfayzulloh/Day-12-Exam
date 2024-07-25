@@ -1,5 +1,6 @@
 const $createForm = document.querySelector(".create__form")
 const $inputs = $createForm.querySelectorAll("input, textarea")
+const $signout = document.querySelector("#signout")
 
 const createBlog = (e) => {
     e.preventDefault()
@@ -32,3 +33,7 @@ const createBlog = (e) => {
 
 
 $createForm.addEventListener("submit", createBlog)
+$signout.addEventListener("click",  () => {
+    console.log("clicked")
+    localStorage.removeItem('token')
+})

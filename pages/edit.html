@@ -4,62 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="../css/edit.css">
 </head>
 <body>
     
     <div class="container" >
-        <div class="dashboard__list" >
-            <h2 class="dashboard__title" >
-                Dashboard
-            </h2>
-            <div  class="article" >
-                <ul class="article__list" >
-                    <li>
-                        Ibrokhim Jalalov
-                    </li>
-                    <li>        
-                        Author
-                    </li>
-                </ul>
-            </div>
-            <a id="signout" href="../index.html">
-                Sign Out?
-            </a>
-        </div>
         <form class="create__form" >
             <h2 class="create__title" >
-                Create New Post
+                Update  Post
             </h2>
             <hr>
             <div class="input__wrapper" >
-                <label class="input__title" for="author">Post Author</label>
+                <label class="input__title" for="author">Author</label>
                 <input class="input__author" name="author" type="text">
             </div>
             <div class="input__wrapper" >
-                <label class="input__title" for="title">Post title</label>
+                <label class="input__title" for="title">Title</label>
                 <input class="input__titles" name="title" type="text">
             </div>
            <div class="wrapper" >
                 <div class="input__wrapper" >
-                    <label class="input__title" for="image">Post image</label>
+                    <label class="input__title" for="image">Image</label>
                     <input class="input__image"  name="image" type="url">
                 </div>
                 <div class="input__wrapper" >
-                    <label class="input__title" for="tag">Post  tag</label>
+                    <label class="input__title" for="tag">Tag</label>
                     <input class="input__tag" name="tag" type="text">
                 </div>
             </div>
             <div class="input__wrapper" >
-                <label class="input__title" for="description">Post description</label>
+                <label class="input__title" for="description">Description</label>
                 <textarea class="input__desc" name="description" id=""></textarea>
             </div>
             <div class="button_wrapper" >
-                <button class="form__submit" type="submit" >Create Post</button>
+                <button class="form__submit" type="submit" >Update Post</button>
             </div>
         </form>
     </div>
 
-    <script src="../scripts/create.js"></script>
+    <script src="../scripts/edit.js"></script>
 </body>
 </html>
