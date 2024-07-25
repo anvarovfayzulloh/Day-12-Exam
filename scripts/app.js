@@ -3,12 +3,14 @@ const $blog = document.querySelector(".blog");
 
 function hideSpinner() {
     document.getElementById('spinner').classList.add('hidden');
+    document.getElementById('spinnerWRapper').classList.remove('flex')
     document.getElementById('spinnerWRapper').classList.add('hidden')
     document.getElementById('load').classList.add('hidden')
 }
 function showSpinner() {
     document.getElementById('spinner').classList.remove('hidden');
     document.getElementById('spinnerWRapper').classList.remove('hidden')
+    document.getElementById('spinnerWRapper').classList.add('flex')
     document.getElementById('load').classList.remove('hidden')
 }
 
