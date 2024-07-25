@@ -21,13 +21,13 @@ const login = (e) => {
     .then(response => response.json())
     .then(data => data.data)
     .then(user => {
-        // if (user.access_token) {
-        //     localStorage.setItem("token", user.access_token);
-        //     location.replace(location.origin + "/index.html");
-        // } 
-        // else {
-        //     console.log("incorrect");
-        // }
+        if (user.access_token) {
+            localStorage.setItem("token", user.access_token);
+            location.replace(location.origin + "/index.html");
+        } 
+        else {
+            console.log("incorrect");
+        }
         if(user.token){
             localStorage.setItem("token", user.token)
             location.replace(location.origin + "/index.html")
