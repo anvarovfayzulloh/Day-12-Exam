@@ -147,7 +147,7 @@ body{
     height: 100%;
     background-color: #1E1E1E;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
 }
 .spinner {
     position: fixed;
@@ -157,15 +157,25 @@ body{
     height: 50px;
     background-color: #ff0404;
     animation: spin 1s linear infinite;
-    z-index: 4;
-    
+    z-index: 6;
 }
-
+.load{
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 45.5%;
+    width: 250px;
+    height: 50px;
+    background-color: #787878;
+}
 @keyframes spin {
     0% {
         transform: translateX(-100px);
     }
     50% {
         transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(-100px);
     }
 }
