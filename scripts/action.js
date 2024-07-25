@@ -12,7 +12,7 @@ const renderBlogs = (blogs) => {
         let dottedDesc = blog.description.slice(0, 40) + (blog.description.length > 40 ? "..." : "");
         $blogElement.querySelector(".blog__text").innerHTML = dottedDesc;
         $blogElement.querySelector(".blog_user_name").innerHTML = blog.author;
-        $blogElement.querySelector("#href").href = `./pages/product.html?productId=${blog._id}`;
+        $blogElement.querySelector("#href").href = `./product.html?productId=${blog._id}`;
         
         $blogElement.querySelector(".delete-btn").addEventListener("click", (e) => {
             e.preventDefault();
