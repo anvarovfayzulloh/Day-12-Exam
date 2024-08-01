@@ -37,8 +37,43 @@ const updateBlog = (e) => {
     })
     .then(response => response.json())
     .then(data => {
-        location.replace(location.origin + "/index.html");
-        console.log(data);
+        if(data.status === "success"){
+            location.replace(location.origin + "/index.html")
+        }
+        else if(localStorage.getItem("token") ===""){
+            Toastify({
+                text: "Authorization failed",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    display: "flex",
+                    alignItems: "center",
+                    fontFamily: "sans-serif",
+                },
+              }).showToast();
+        }
+        else if(data.success === false || data.status === "error"){
+            Toastify({
+                text: "All Lines Must Be Filled",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true, 
+                style: {
+                  background: "red",
+                  display: "flex",
+                  alignItems: "center",
+                  fontFamily: "sans-serif",
+                },
+              }).showToast();
+        }
     });
 };
 

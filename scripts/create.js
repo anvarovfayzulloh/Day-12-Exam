@@ -13,7 +13,6 @@ const createBlog = (e) => {
         tags: values[3],
         description: values[4],
     } 
-    console.log(article)
 
     fetch(`https://blog-post-production-b61c.up.railway.app/api/v1/blogs`,{
         method: "POST",
@@ -21,12 +20,48 @@ const createBlog = (e) => {
             "Content-Type" : "application/json",
             "Authorization":  `Bearer ${localStorage.getItem("token")}`
         },
-        body: JSON.stringify(article)
+        body: JSON.stringify(article),
     })
     .then(responce => responce.json())
     .then(data => {
-        location.replace(location.origin + "/index.html")
-        console.log(data)
+        if(data.status === "success"){
+            location.replace(location.origin + "/index.html")
+        }
+        else if(localStorage.getItem("token") ===""){
+            Toastify({
+                text: "Authorization failed",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    display: "flex",
+                    alignItems: "center",
+                    fontFamily: "sans-serif",
+                },
+              }).showToast();
+        }
+        else if(data.success === false || data.status === "error"){
+            Toastify({
+                text: "All Lines Must Be Filled",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true, 
+                style: {
+                  background: "red",
+                  display: "flex",
+                  alignItems: "center",
+                  fontFamily: "sans-serif",
+                },
+              }).showToast();
+        }
+        
     })
 }
 
@@ -36,4 +71,5 @@ $createForm.addEventListener("submit", createBlog)
 $signout.addEventListener("click",  () => {
     console.log("clicked")
     localStorage.removeItem('token')
+    localStorage.setItem('token', "")
 })

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/create.css">
 </head>
 <body>
@@ -34,11 +35,11 @@
             <hr>
             <div class="input__wrapper" >
                 <label class="input__title" for="author">Post Author</label>
-                <input class="input__author" name="author" type="text">
+                <input  class="input__author" name="author" type="text">
             </div>
             <div class="input__wrapper" >
                 <label class="input__title" for="title">Post title</label>
-                <input class="input__titles" name="title" type="text">
+                <input  class="input__titles" name="title" type="text">
             </div>
            <div class="wrapper" >
                 <div class="input__wrapper" >
@@ -47,19 +48,19 @@
                 </div>
                 <div class="input__wrapper" >
                     <label class="input__title" for="tag">Post  tag</label>
-                    <input class="input__tag" name="tag" type="text">
+                    <input required class="input__tag" name="tag" type="text">
                 </div>
             </div>
             <div class="input__wrapper" >
                 <label class="input__title" for="description">Post description</label>
-                <textarea  class="input__desc" name="description" id=""></textarea>
+                <textarea   class="input__desc" name="description" id=""></textarea>
             </div>
             <div class="button_wrapper" >
                 <button class="form__submit" type="submit" >Create Post</button>
             </div>
         </form>
     </div>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../scripts/create.js"></script>
 </body>
 </html>

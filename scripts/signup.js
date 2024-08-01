@@ -10,7 +10,7 @@ const signUp = (e) => {
         email: values[1],
         password: values[2],
     }
-    console.log(user)
+    
         fetch(`https://blog-post-production-b61c.up.railway.app/api/v1/user/register`,{
             method: "POST",
             headers:{
@@ -21,7 +21,13 @@ const signUp = (e) => {
             .then(response => response.json())
             .then(data => data.data)
             .then(user => {
-                location.replace(location.origin + "/pages/login.html")
+                if(user._id){
+                    location.replace(location.origin + "/pages/login.html")
+                    console.log(user._id)
+                }
+                else{
+                    console.log("failed")
+                }
                 console.log(user)
             })
 

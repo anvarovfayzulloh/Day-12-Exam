@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/edit.css">
 </head>
 <body>
@@ -29,19 +30,19 @@
                 </div>
                 <div class="input__wrapper" >
                     <label class="input__title" for="tag">Tag</label>
-                    <input class="input__tag" name="tag" type="text">
+                    <input required class="input__tag" name="tag" type="text">
                 </div>
             </div>
             <div class="input__wrapper" >
                 <label class="input__title" for="description">Description</label>
-                <textarea class="input__desc" name="description" id=""></textarea>
+                <textarea required class="input__desc" name="description" id=""></textarea>
             </div>
             <div class="button_wrapper" >
                 <button class="form__submit" type="submit" >Update Post</button>
             </div>
         </form>
     </div>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../scripts/edit.js"></script>
 </body>
 </html>
